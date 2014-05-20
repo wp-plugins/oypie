@@ -9,7 +9,7 @@ Author URI: http://sander-dijkstra.nl/
 License: Commercial use
 */
 
-require_once("../shortcode.php");
+include("shortcode.php");
 
 // Add options page
 add_action('admin_menu', 'oypie_menu');
