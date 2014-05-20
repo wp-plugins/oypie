@@ -5,7 +5,7 @@
 function oypo_output($atts) {
    extract(shortcode_atts(array(
       'type' => 'user',
-      'id' => 'sanderonline',
+      'type_id' => 'sanderonline',
       'wl' => '',
       'trans' => '1',
       'nonav' => '1',
@@ -14,9 +14,9 @@ function oypo_output($atts) {
    
    //Mapid or userid
    if($type == 'map'){
-    $out_id = "var mapid='".$id."';";
+    $out_id = "var mapid='".$type_id."';";
    }elseif($type == 'user'){
-    $out_id = "var userid='".$id."';";    
+    $out_id = "var userid='".$type_id."'";    
    }elseif($type == 'school'){
     $out_id = "";
    }
@@ -67,6 +67,8 @@ $output = "
         
         return $output;
 }
+
+
 
 
 add_shortcode('oypo', 'oypo_output');?>
