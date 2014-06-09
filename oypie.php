@@ -3,7 +3,7 @@
 Plugin Name: OYPie
 Plugin URI: http://sanderonlinemedia.nl/oypie;
 Description: This plugin is for photographers who use the service 'OYPO'. In this plugin you can generate shortcodes for your pages and posts. The shortcode generator can you find under 'Tools' > 'SanderOnline'.
-Version: 0.4
+Version: 0.6
 Author: SanderOnline Media / Sander Dijkstra
 Author URI: http://sander-dijkstra.nl/
 License: Commercial use
@@ -38,11 +38,11 @@ function oypie_settings_page() {
     </td></tr>
     <tr id="one" style="display: none;">
         <td><label>Gebruikersnaam</label></td>
-        <td><input type="text" name="type_id" value=''/></td>
+        <td><input type="text" name="id" value=''/></td>
     </tr>
     <tr id="two" style="display: none;">
         <td><label>Map id</label></td>
-        <td><input type="text" name="type_id" value=''/></td>
+        <td><input type="text" name="id" value=''/></td>
     </tr>
     <tr id="three" style="display: none;">
         <td><label>Mapnavigatie</label></td>
@@ -75,7 +75,7 @@ function oypie_settings_page() {
         <td><label>Uw shortcode</label></td>
         <td>  <div class="well">
   [oypo <span id='typeDisplay'></span> 
-  <span id='type_idDisplay'></span>
+  <span id='idDisplay'></span>
   <span id='wlDisplay'></span>
   <span id='nonavDisplay'></span>
   <span id='cssDisplay'></span>
@@ -120,17 +120,17 @@ label {
         <hr />
 		<h2>Voorbeelden</h2>
         <strong>Profiel</strong><br />
-		<input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="user" type_id="sanderonline"]'/><br />
+		<input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="user" id="sanderonline"]'/><br />
         <strong>Album</strong><br />
-        <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="map" type_id="DA3CB45464FF0C4A"]'/><br />
+        <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="map" id="DA3CB45464FF0C4A"]'/><br />
         <strong>Inlogkaartjes</strong><br />
         <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="school"]'/><br />
         <strong>Album met transparante achtergrond</strong><br />
-        <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="map" type_id="DA3CB45464FF0C4A" trans="1"]'/><br />
+        <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="map" id="DA3CB45464FF0C4A" trans="1"]'/><br />
         <strong>Album met whitelabel-verzending</strong><br />
-        <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="map" type_id="DA3CB45464FF0C4A" wl="sanderonline"]'/><br />
+        <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="map" id="DA3CB45464FF0C4A" wl="sanderonline"]'/><br />
         <strong>Album met eigen css-bestand</strong><br />
-        <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="map" type_id="DA3CB45464FF0C4A" css="http://example.com/style.css"]'/><br />
+        <input type="text" name="mapid" id="mapid" style="width: 500px;" value='[oypo type="map" id="DA3CB45464FF0C4A" css="http://example.com/style.css"]'/><br />
 
 	</div>
 <script type='text/javascript'>//<![CDATA[ 

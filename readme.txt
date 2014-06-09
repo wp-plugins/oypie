@@ -29,6 +29,9 @@ The shortcode generator can you find under 'Tools' -> 'SanderOnline'
 
 == Changelog ==
 
+= 0.6 = 
+Bugfixes
+
 = 0.3 = 
 Bugfixes
 

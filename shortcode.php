@@ -1,26 +1,29 @@
 <?php
+
 /**
  * SHORTCODE OUTPUT
  */
 function oypo_output($atts) {
    extract(shortcode_atts(array(
-      'type' => 'user',
-      'type_id' => 'sanderonline',
+      'type' => '',
+      'id' => '',
       'wl' => '',
       'trans' => '1',
       'nonav' => '1',
       'css' => ''
    ), $atts));
    
+   $identical = $id;
+   
    //Mapid or userid
    if($type == 'map'){
-    $out_id = "var mapid='".$type_id."';";
+    $out_id = "var mapid='".$identical."';";
    }elseif($type == 'user'){
-    $out_id = "var userid='".$type_id."'";    
+    $out_id = "var userid='".$identical."'";    
    }elseif($type == 'school'){
     $out_id = "";
    }
-   
+
    //Transparcency
    if($trans == 1) {
     $out_trans = "var transparency=1;";
