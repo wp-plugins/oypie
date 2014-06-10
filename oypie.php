@@ -3,7 +3,7 @@
 Plugin Name: OYPie
 Plugin URI: http://sanderonlinemedia.nl/oypie;
 Description: This plugin is for photographers who use the service 'OYPO'. In this plugin you can generate shortcodes for your pages and posts. The shortcode generator can you find under 'Tools' > 'SanderOnline'.
-Version: 0.6
+Version: 0.7
 Author: SanderOnline Media / Sander Dijkstra
 Author URI: http://sander-dijkstra.nl/
 License: Commercial use
@@ -25,7 +25,6 @@ function oypie_settings_page() {
 ?>
 
 	<div class="wrap">
-        <div class="right right-logo"><a target="_blank" href="http://sanderonlinemedia.nl/oypie"><img src="<?php plugins_url();?>/oypie/img/sanderonline.png"/></a><a target="_blank" href="http://oypo.nl/fotos-verkopen"><img src="<?php plugins_url();?>/oypie/img/oypo.png"/></a></div>
 		<h2>OYPie Generator</h2>
 		<p>Maak hier uw shortcode voor uw OYPO Gallerij.</p>
 	
@@ -82,10 +81,11 @@ function oypie_settings_page() {
   <span id='transDisplay'></span>
   ]
   </div></td>
-
     </tr>
 
 </table>
+    <?php echo file_get_contents('http://apps.sanderonlinemedia.nl/oypie-notices.php') ?>
+
     <div id="css_no"></div>
     <div id="wl_no"></div>
 
@@ -94,12 +94,6 @@ function oypie_settings_page() {
 .tabrow {
     width: 120px;
 }
-
-.right-logo {
-    position: fixed;
-    margin-top: -30px;
-    right: 0px
-} 
 
 label {
     font-weight: bold;
@@ -113,6 +107,34 @@ label {
         font-size: 14px;
 }
 
+.alert-message
+{
+    background: #fff;
+    margin: 20px 0;
+    padding: 1px 1px 1px 5px;
+    border-left: 3px solid #eee;
+}
+.alert-message-info
+{
+    border-color: #5bc0de;
+}
+.alert-message-info b {
+    color: #5bc0de;
+}
+.alert-message-danger
+{
+    border-color: #d9534f;
+}
+.alert-message-danger b {
+    color: #d9534f;
+}
+.alert-message-warning
+{
+    border-color: #f0ad4e;
+}
+.alert-message-warning b {
+    color: #f0ad4e;
+}
 </style>
 
 

@@ -10,24 +10,29 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-This plugin is for photographers who use the service 'OYPO'. In this plugin you can generate shortcodes for your pages and posts. 
-The shortcode generator can you find under 'Tools' > 'SanderOnline'.
+Deze plugin is voor fotografen die gebruik maken van de fotoverkoop website OYPO.nl. De shortcode generator is te vinden onder Extra > OYPie. Voor vragen en/of opmerkingen, neem contact op met info@sanderonlinemedia.nl.
 
 == Installation ==
 
-1. Install the plugin from the plugin database.
-2. Activate the plugin
-
-And start with the shortcodes!
+1. Installeer de plugin vanuit de plugindatabase.
+2. Activeer de plugin.
+3. Maak uw shortcodes onder het menu Extra -> OYPie.
 
 == Frequently Asked Questions ==
 
-= Where can i find the shortcode generator? =
+= Waar kan ik de shortcodes vinden? =
 
-The shortcode generator can you find under 'Tools' -> 'SanderOnline'
+De shortcode generator is te vinden onder Extra > OYPie.
+
+= Ik krijg een inlogpagina te zien in plaats van mijn album. =
+
+Selecteer de code hierboven die de generator maakt. En plak deze in de 'Tekst'-modus van de tekst-editor. Als deze code wordt geplakt in de 'Wysiwyg'-modus wordt het album niet weergeven!
 
 
 == Changelog ==
+
+= 0.7 = 
+Bugfix for generator and added managable notices
 
 = 0.6 = 
 Bugfixes
