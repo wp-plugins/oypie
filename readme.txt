@@ -31,6 +31,9 @@ Selecteer de code hierboven die de generator maakt. En plak deze in de 'Tekst'-m
 
 == Changelog ==
 
+= 0.9 = 
+Bugfix for color function
+
 = 0.8 = 
 Added color function and bugfix for whitelabel store
 

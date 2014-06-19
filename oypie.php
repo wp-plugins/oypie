@@ -3,7 +3,7 @@
 Plugin Name: OYPie
 Plugin URI: http://sanderonlinemedia.nl/oypie;
 Description: This plugin is for photographers who use the service 'OYPO'. In this plugin you can generate shortcodes for your pages and posts. The shortcode generator can you find under 'Tools' > 'SanderOnline'.
-Version: 0.8
+Version: 0.9
 Author: SanderOnline Media / Sander Dijkstra
 Author URI: http://sander-dijkstra.nl/
 License: Commercial use

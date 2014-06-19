@@ -66,17 +66,17 @@ function oypo_output($atts) {
     if($colors != NULL){
         $colors = explode(' ', $colors);
    
-        $out_colors['1'] = "var kleur1='".$colors[0]."';
+        $out_colors['1'] = "var kleur1='#".$colors[0]."';
         ";
-        $out_colors['2'] = "var kleur2='".$colors[1]."';
+        $out_colors['2'] = "var kleur2='#".$colors[1]."';
         ";
-        $out_colors['3'] = "var kleur3='".$colors[2]."';
+        $out_colors['3'] = "var kleur3='#".$colors[2]."';
         ";
-        $out_colors['4'] = "var kleur4='".$colors[3]."';
+        $out_colors['4'] = "var kleur4='#".$colors[3]."';
         ";
-        $out_colors['5'] = "var kleur5='".$colors[4]."';
+        $out_colors['5'] = "var kleur5='#".$colors[4]."';
         ";
-        $out_colors['6'] = "var kleur6='".$colors[5]."';
+        $out_colors['6'] = "var kleur6='#".$colors[5]."';
         ";
         
     }else{
