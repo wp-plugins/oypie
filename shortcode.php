@@ -89,13 +89,54 @@ $output = "
         var mode='" .$type."';
         ". $out_id.$out_trans.$out_wl.$out_nav.$out_css.$out_colors['1'].$out_colors['2'].$out_colors['3'].$out_colors['3'].$out_colors['5'].$out_colors['6']."
         </script>
-        <script type=\"text/javascript\" src=\"".plugins_url()."/oypie/js/1207a.js\"></script>
+        <script type=\"text/javascript\" src=\"//www.oypo.nl/pixxer/api/templates/1207a.js\"></script>
         <div id=\"pixxer_iframe\"></div>";
         
         return $output;
 }
 
 
+function oypo_price($atts) {
+   extract(shortcode_atts(array(
+      'id' => '',
+      'type' => '',
+      'price' => '',
+      'css' => ''
+   ), $atts));
+   
+   if($css == 1) {
+    function css_price() {
+   wp_enqueue_style('price', plugins_url('/css/price.css', __FILE__));
+   }
+   add_action( 'wp_enqueue_scripts', 'css_price' );   
+   $output = "<script type=\"text/javascript\">
+var profileid='".$id."';
+var showtype=".$type.";
+var prices=".$price.";
+</script>
+<script type=\"text/javascript\" src=\"//www.oypo.nl/pixxer/api/templates/productinfo.js\"></script>
+<div id=\"pixxer_products\"></div>
+<link rel='stylesheet' href='".plugins_url()."/css/price.css' type='text/css' media='all' /> 
+";
 
+}else{
 
-add_shortcode('oypo', 'oypo_output');?>
+    
+   $output = "
+   <script type=\"text/javascript\">
+var profileid='".$id."';
+var showtype=".$type.";
+var prices=".$price.";
+</script>
+<script type=\"text/javascript\" src=\"//www.oypo.nl/pixxer/api/templates/productinfo.js\"></script>
+<div id=\"pixxer_products\"></div> 
+";    
+}
+   return $output;
+
+}
+
+add_shortcode('oypo', 'oypo_output');
+add_shortcode('oypo_price', 'oypo_price');
+
+?>

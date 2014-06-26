@@ -16,13 +16,13 @@ Deze plugin is voor fotografen die gebruik maken van de fotoverkoop website OYPO
 
 1. Installeer de plugin vanuit de plugindatabase.
 2. Activeer de plugin.
-3. Maak uw shortcodes onder het menu Extra -> OYPie.
+3. Maak uw shortcodes onder het menu OYPie.
 
 == Frequently Asked Questions ==
 
 = Waar kan ik de shortcodes vinden? =
 
-De shortcode generator is te vinden onder Extra > OYPie.
+De shortcode generator is te vinden onder OYPie.
 
 = Ik krijg een inlogpagina te zien in plaats van mijn album. =
 
@@ -30,6 +30,9 @@ Selecteer de code hierboven die de generator maakt. En plak deze in de 'Tekst'-m
 
 
 == Changelog ==
+
+= 0.10 = 
+Added new shortcode, shortcode generator and created a new menu.
 
 = 0.9 = 
 Bugfix for color function
