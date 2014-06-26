@@ -31,6 +31,9 @@ Selecteer de code hierboven die de generator maakt. En plak deze in de 'Tekst'-m
 
 == Changelog ==
 
+= 1.0.0 = 
+Last bugfixes for release 
+
 = 0.10 = 
 Added new shortcode, shortcode generator and created a new menu.
 
