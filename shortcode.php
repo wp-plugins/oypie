@@ -116,7 +116,7 @@ var prices=".$price.";
 </script>
 <script type=\"text/javascript\" src=\"//www.oypo.nl/pixxer/api/templates/productinfo.js\"></script>
 <div id=\"pixxer_products\"></div>
-<link rel='stylesheet' href='".plugins_url()."/css/price.css' type='text/css' media='all' /> 
+<link rel='stylesheet' href='".plugins_url()."/oypie/css/price.css' type='text/css' media='all' /> 
 ";
 
 }else{
