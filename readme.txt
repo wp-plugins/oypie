@@ -31,6 +31,9 @@ Selecteer de code hierboven die de generator maakt. En plak deze in de 'Tekst'-m
 
 == Changelog ==
 
+= 1.0.1 = 
+Added cart widget
+
 = 1.0.0 = 
 Last bugfixes for release 
 
