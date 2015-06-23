@@ -106,7 +106,7 @@
     <div class="inside">
     <h2>Algemene informatie</h2>
     <hr/>
-    <p>Welkom bij OYPie 1.1.0! In deze versie ontbreken de shortcode generators in het menu.
+    <p>Welkom bij OYPie 1.1.1! In deze versie ontbreken de shortcode generators in het menu.
     Deze hebben namelijk een nieuwe plaats gevonden in de WYSIWYG-editor, 
     hierdoor hoef je de shortcodes van de vorige generators ook niet meer te plakken in de text-editor omdat dit nu automatisch gebeurd.
     Deze nieuwe generators bevatten de basisfuncties. Het wijzigen van de kleuren, css en whitelabelverzending kan je handmatig toevoegen.
