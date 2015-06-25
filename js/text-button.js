@@ -28,16 +28,24 @@
                                 name: 'mapnavigatie',
                                 label: 'Mapnavigatie',
                                 'values': [
-                                    {text: 'Ja', value: ' nonav="1"'},
-                                    {text: 'Nee', value: ''}
+                                    {text: 'Ja', value: ''},
+                                    {text: 'Nee', value: ' nonav="1"'}
                                 ]
                             },{
                                 type: 'listbox',
                                 name: 'transparant',
                                 label: 'Transparantheid',
                                 'values': [
-                                    {text: 'Ja', value: ' trans="1"'},
-                                    {text: 'Nee', value: ''}
+                                    {text: 'Nee', value: ''},
+                                    {text: 'Ja', value: ' trans="1"'}
+                                ]
+                            },{
+                                type: 'listbox',
+                                name: 'voorkeuren',
+                                label: 'Voorkeursinstellingen',
+                                'values': [
+                                    {text: 'Nee', value: ''},
+                                    {text: 'Ja', value: ' pref="1"'}
                                 ]
                             },{
                                 type: 'container',
@@ -53,7 +61,7 @@
                     text: 'Prijslijst',
                     onclick: function() {
                         editor.windowManager.open( {
-                            title: 'Album toevoegen',
+                            title: 'Prijslijst toevoegen',
                             body: [{
                                 type: 'listbox',
                                 name: 'type',

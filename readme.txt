@@ -27,6 +27,10 @@ De shortcode generator onder het camera icoontje bij de WYSIWYG editor bij elk s
 
 == Changelog ==
 
+= 1.1.2 = 
+Preferences added, old shortcode generators have been updated.
+
+
 = 1.1.1 = 
 New shortcodegenerators which can be found in the TinyMCE editor also known as the WYSIWYG-editor.
 Updated help-page with more information and a colorsettings-generator

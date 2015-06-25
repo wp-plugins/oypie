@@ -3,28 +3,27 @@
 Plugin Name: OYPie
 Plugin URI: http://sanderonlinemedia.nl/oypie;
 Description: This plugin is for photographers who use the service 'OYPO'. In this plugin you can generate shortcodes for your pages and posts. The shortcode generator can you find under 'Tools' > 'SanderOnline'.
-Version: 1.1.1
+Version: 1.1.2
 Author: SanderOnline Media / Sander Dijkstra
 Author URI: http://sander-dijkstra.nl/
 License: Commercial use
 */
 
-include("shortcode.php");
-include("widget.php");
-
-// Add OYPO
-
+// Load shortcodes and widget
+require_once("shortcode.php");
+require_once("widget.php");
 
 // Add options page
 add_action( 'admin_menu', 'oypie_menu' );
-
-
 
 wp_enqueue_script('jquery');
 
 function oypie_menu() {
     add_menu_page("", "OYPie", 'oypie', "oypie", "oypie_home_page",'dashicons-camera', 76 );
-    add_submenu_page("oypie", "OYPie - Help", "Help", 0, "oypie_help", "oypie_help_page");
+    add_submenu_page("oypie", "OYPie - Help", "Informatie", 0, "oypie_help", "oypie_help_page");
+    add_submenu_page("oypie", "OYPie - Albumgenerator", "Albumgenerator", 0, "oypie_album", "oypie_album_page");
+    add_submenu_page("oypie", "OYPie - Prijslijstgenerator", "Prijslijstgenerator", 0, "oypie_price", "oypie_price_page");
+    add_submenu_page("oypie", "OYPie - Voorkeuren", "Voorkeuren", 0, "oypie_preference", "oypie_preference_page");
     remove_submenu_page( 'oypie', 'oypie' );
 }
 
@@ -32,15 +31,18 @@ function oypie_menu() {
 // Admin Pages
     
 function oypie_price_page() {
-    require_once("price_page.php");
+    require_once("pages/price.php");
     }
     
 function oypie_help_page() {
-    require_once("help_page.php");
+    require_once("pages/help.php");
     }
 
 function oypie_album_page() {
-    require_once("album_page.php");
+    require_once("pages/album.php");
+}
+function oypie_preference_page() {
+    require_once("pages/preference.php");
 }
 
 // MCE Button
@@ -73,4 +75,9 @@ function oypie_tc_css() {
  
 add_action('admin_enqueue_scripts', 'oypie_tc_css');
 
+function oypie_admin_css() {
+    wp_enqueue_style('oypie', plugins_url('css/admin.css', __FILE__));
+}
+ 
+add_action('admin_enqueue_scripts', 'oypie_admin_css');
 ?>

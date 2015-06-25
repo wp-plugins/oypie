@@ -4,16 +4,41 @@
  * SHORTCODE OUTPUT
  */
 function oypo_output($atts) {
+    
    extract(shortcode_atts(array(
       'type' => '',
       'id' => '',
       'wl' => '',
-      'trans' => '1',
-      'nonav' => '1',
+      'trans' => '',
+      'nonav' => '',
       'css' => '',
-      'colors' => ''
+      'colors' => '',
+      'pref' => ''
    ), $atts));
    
+   
+   if($pref == '1') {
+    // Load preferences
+    global $wpdb;
+    $preferences = $wpdb->get_var( "SELECT option_value FROM $wpdb->options WHERE option_name = 'oypie_pref'");
+    $preferences = explode('\/', $preferences);
+    
+    // Set preferences, this overrules the settings of the shortcode!
+    if($preferences[1] != NULL){
+    $colors = $preferences[1];
+    }
+    if($preferences[2] != NULL){
+    $css = $preferences[2];
+    }
+    if($preferences[3] != NULL){
+    $wl = $preferences[3];
+    }
+    if($preferences[4] != NULL){
+    $trans = $preferences[4];
+    }
+       
+   }
+
    $identical = $id;
    
    //Mapid or userid
@@ -26,7 +51,7 @@ function oypo_output($atts) {
    }elseif($type == 'school'){
     $out_id = "";
    }
-
+    
    //Transparcency
    if($trans == 1) {
     $out_trans = "var transparency=1;
@@ -51,15 +76,9 @@ function oypo_output($atts) {
    }
    //Custom css link
    if($css != NULL){
-    $array = get_headers($css);
-    $string = $array[0];
-    if(strpos($string,"200")) {
         $out_css = "var css='".$css."';
         ";
     } else {
-        $out_css = "";
-    }
-    }else{
         $out_css = "";
     }
     //Custom colors BETA
